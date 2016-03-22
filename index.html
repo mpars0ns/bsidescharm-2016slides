@@ -89,8 +89,18 @@
                 </section>
                 <!-- reminder SSL/TLS not code signing -->
                 <section>
+                  <section>
                   <h2>Quick Caveat</h2>
                   <p> Code signing certificate != SSL/TLS certificate </p>
+                  </section>
+                  <section>
+                    <h3> Code signing </h3>
+                    <img data-src="images/chrome_signed.png">
+                  </section>
+                  <section>
+                    <h3> SSL/TLS certificate </h3>
+                    <img data-src="images/google_tls.png">
+                  </section>
                 </section>
 
                 <!-- scans.io and censys.io -->
@@ -104,6 +114,8 @@
                 </section>
                   <section>
                   <h3> You could ingest <a href='http://scans.io'>scans.io</a> sonar ssl scans</h3>
+                   <br>
+                   <p> Checkout my <a href="https://github.com/mpars0ns/scansio-sonar-es">Scansio-Sonar-ES</a> github repo </p>
                   </section>
                   <section>
                   <h3> Or use  <a href='https://censys.io'>censys.io</a></h3>
@@ -151,11 +163,63 @@
 
               <!-- passive total -->
               <section>
-                PassiveTotal
+                <section>
+                <h3><a href="https://passivetotal.org/">PassiveTotal</a></h3>
+                <ul>
+                  <li>Should be the first place any analyst goes when performing any infrastructure hunting</li>
+                  <li>Aggregates multiple passive DNS sources</li>
+                  <li>Provides WHOIS data </li>
+                  <li>Provides references to OpenSource reporting</li>
+                  <li>Also has SSL certificates</li>
+                  <li>So much more we are only touching the surface</li>
+                </ul>
               </section>
+              <section>
+                <h3>If you aren't you using it</h3>
+                <h3>You really should try it out</h3>
+                <h3> You won't regret it </h3>
+                <p>Disclamer: PassiveTotal provided me researcher access for data required for this presentation</p>
+              </section>
+            </section>
               <!-- network defense -->
               <section>
-                Network defense???
+                <section>
+                  <h3>Network defense</h3>
+                </section>
+                <section>
+                <h3><strike>Network defense</strike></h3>
+              </section>
+              <section>
+                <h3>Network Hygeine</h3>
+                <br>
+                <p>Most of these you will have to do with your own sonar scan data or <a href="https://censys.io">censys.io</a> data </p>
+                </section>
+                <section>
+                  <h3>Look at your netblocks </h3>
+                  <ul>
+                    <li>Use your ASN for a censys.io search</li>
+                    <li>Use your ASN or subnets if sonar data in elasticsearch</li>
+                  </ul>
+                </section>
+                <section>
+                  <h3>What to look for </h3>
+                  <ul>
+                    <li>Your security appliances</li>
+                    <li>Remote access managment
+                      <ul>
+                      <li>HP integrated Lights Out</li>
+                      <li>Dell Remote Access Card</li></ul>
+                    </li>
+                    <li>Websites or services you didn't know about</li>
+                  </ul>
+                </section>
+                <section>
+                  <h3>Look outside your netblocks</h3>
+                  <ul>
+                    <li>Look for certs for your org not inside your netblocks</li>
+                    <li>Look for certs that have email addresses from your org</li>
+                    <li>Look for certs who have your org as a Subject Alt Name</li>
+                </section>
               </section>
 
               <section>
@@ -191,4 +255,3 @@
         </script>
     </body>
 </html>
-
