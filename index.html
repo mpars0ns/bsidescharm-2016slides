@@ -167,6 +167,7 @@
                 <h3><a href="https://passivetotal.org/">PassiveTotal</a></h3>
                 <ul>
                   <li>Should be the first place any analyst goes when performing any infrastructure hunting</li>
+                  <li>Merge tradtional hunting with new methods</li>
                   <li>Aggregates multiple passive DNS sources</li>
                   <li>Provides WHOIS data </li>
                   <li>Provides references to OpenSource reporting</li>
@@ -228,8 +229,51 @@
 
               <!-- threat actor -->
               <section>
-                Threat actor a
+                <h2>Let's do some SSL hunting/pivoting</h2>
               </section>
+
+              <section>
+                <section>
+                <h3>CVE-2014-1761</h3>
+                <h3>Remote Code Execution - Word RTF Memory Corruption Vulnerability </h3>
+              </section>
+              <section>
+                <h3>Awesome <a href="https://blogs.technet.microsoft.com/srd/2014/03/24/security-advisory-2953095-recommendation-to-stay-protected-and-for-detections/">technet</a> article</h3>
+                <h3>Yara Sigs!</h3>
+                <h3>SSL SHA1 Hash</h3>
+                <h3>Command and Control IP</h3>
+                <h3>Potential Command and Control Domain</h3>
+              </section>
+            <section>
+              <h3>Let's pivot on the IP and SSL SHA1</h3>
+              <h5>IP: 185.12.44.51 </h5>
+              <h5>SHA1: df7240fb9bcd5312eba5f9c2dde7a29a1dc8f355 </h5>
+              <img data-src='images/technet_initial.png'>
+            </section>
+            <section>
+              <h3>SSL Pivot</h3>
+              <img data-src='images/technet_sslpivot.png'>
+            </section>
+            <section>
+              <h3>Let's do some traditional pivots</h3>
+              <h4>Passive DNS for times when the SSL certs were active</h4>
+              <h4>Whois on any relavant domains found</h4>
+            </section>
+            <section>
+              <h3>Tradtional Pivots</h3>
+              <img data-src='images/technet_tradtional_pivot.png'>
+            </section>
+            <section>
+              <h3>Success!!!!</h3>
+              <br>
+              <h3>Go from one SSL Cert, one IP, and one Domain</h3>
+              <br>
+              <h3>Get 6 IPs and Three Domains using same registration info</h3>
+              <br>
+            </section>
+            <section data-background="images/ron_happy.gif">
+            </section>
+          </section>
               <section>
                 Threat actor b
               </section>
@@ -251,7 +295,6 @@
         <script src="js/reveal.js"></script>
         <script>
             Reveal.initialize();
-            Reveal.configure({ slideNumber: true });
         </script>
     </body>
 </html>
