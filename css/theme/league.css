@@ -191,6 +191,17 @@ body {
 .reveal table tr:last-child td {
   border-bottom: none; }
 
+.reveal table tr.orange {
+  color: #DD885A;
+}
+
+.reveal table tr.green {
+  color: #72c85e;
+}
+.reveal table tr.white {
+  color: #EEEBD6;
+}
+
 .reveal sup {
   vertical-align: super; }
 
