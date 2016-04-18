@@ -182,6 +182,36 @@
                 <p>Disclamer: PassiveTotal provided me researcher access for data required for this presentation</p>
               </section>
             </section>
+            <section>
+              <section>
+                <h3>SSL Hunting Basics</h3>
+                <h3>Tips to help you get started </h3>
+              </section>
+              <section>
+                <h3> Where to start </h3>
+                <ul>
+                  <li>IP to Cert</li>
+                  <li>Cert to IP</li>
+                </ul>
+              </section>
+              <section>
+                <h3> What to consider </h3>
+                <ul>
+                  <li>Look at the time frame cert was seen on an IP</li>
+                  <li>Was cert seen during malicious ativity ?</li>
+                  <li>Do you have malware/implant using ssl ?</li>
+                  <li>How many other hosts are seen using that ssl cert?</li>
+                  <li>Expiration dates on certs</li>
+                  <li>Issuer
+                    <ul>
+                      <li>Self Signed </li>
+                      <li>Free cert </li>
+                      <li>Paid cert </li>
+                    </ul>
+                  </li>
+                </ul>
+              </section>
+          </section>
               <!-- network defense -->
               <section>
                 <section>
@@ -194,7 +224,7 @@
                 <h3>IDS Monitoring - SSL fingerprints </h3>
               </ul>
                     <li> Suricata </li>
-                    <li> BRO intel framework </li>
+                    <li> Bro </li>
                   </ul>
                 </section>
                 <section>
@@ -250,36 +280,7 @@
                     <li>Take a look at Passive Total keyword searching (DNS, Whois, SSL ) aka brand monitoring</li>
                 </section>
               </section>
-              <section>
-                <section>
-                  <h3>SSL Hunting Basics</h3>
-                  <h3>Tips to help you get started </h3>
-                </section>
-                <section>
-                  <h3> Where to start </h3>
-                  <ul>
-                    <li>IP to Cert</li>
-                    <li>Cert to IP</li>
-                  </ul>
-                </section>
-                <section>
-                  <h3> What to consider </h3>
-                  <ul>
-                    <li>Look at the time frame cert was seen on an IP</li>
-                    <li>Was cert seen during malicious ativity ?</li>
-                    <li>Do you have malware/implant using ssl ?</li>
-                    <li>How many other hosts are seen using that ssl cert?</li>
-                    <li>Expiration dates on certs</li>
-                    <li>Issuer
-                      <ul>
-                        <li>Self Signed </li>
-                        <li>Free cert </li>
-                        <li>Paid cert </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </section>
-            </section>
+
               <!-- threat actor -->
               <section>
                 <h2>Let's do some SSL hunting/pivoting</h2>
@@ -414,12 +415,51 @@
                   <h3>Still very active today</h3>
                 </section>
           </section>
+          <section>
               <section>
-                APT 28
+                <h3> APT 28/Sofacy - X Tunnel </h3>
+                <img data-src='images/apt28_headline.png'>
               </section>
+              <section>
+                <h3> Inital IOC</h3>
+                <img data-src='images/apt28_iocs.jpg'>
+            </section>
+            <section>
+              <h3> Passive DNS pivot </h3>
+              <img data-src='images/apt28_trad_pivot.jpg'>
+            </section>
+            <section>
+              <h3> SSL Certificate pivot on initial IP's</h3>
+              <img data-src='images/apt28_ssl_first_pivot.jpg'>
+            </section>
+            <section>
+              <h3> Pivot on new ssl certificates </h3>
+              <img data-src='images/apt28_ssl_second_pivot.jpg'>
+            </section>
+            <section>
+              <h3> SSL pivot on new ip addreses </h3>
+              <h3> One interesting new certificate found </h3>
+              <img data-src='images/apt28_ssl_zoom.png'>
+            </section>
+            <section>
+              <h3> Passive DNS pivot on new ipaddresses </h3>
+              <h3> Two intereting domains and osint reports </h3>
+              <img data-src='images/apt28_addtional_domains.jpg'>
+            </section>
+            <section>
+              <h4> Initial report 2 domains, 2 IPs, 1 SSL Cert </h4>
+                <h4> Tradtional pivots reveal 5 interesting domains</h4>
+
+              <h4> Now have 17 IPs, 5 domains, 4 ssl certs <h4>
+                <h4>Addtional linkages via OSINT reporting</h4>
+
+            </section>
+          </section>
+            <section>
               <section>
                 Posedion - Point of Sale not Brazil Pentest company
               </section>
+            </section>
               <!-- conclusion -->
             </div>
         </div>
